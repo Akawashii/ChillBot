@@ -1,0 +1,14 @@
+{
+  "name": "despacito2",
+  "version": "1.0.0",
+  "description": "Priverate spam bot for ping me daddy's server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Akawashii",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
