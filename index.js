@@ -260,7 +260,7 @@ bot.on("message", function(message) {
                       ]
                     }
                   });
-            
+            break;
               case "avatar":
 		    const member = message.mentions.members.first();
 			if (!member) return message.channel.send("Here,your beautiful avatar,like you asked. " + message.author.avatarURL);
