@@ -37,7 +37,7 @@ bot.on("message", function(message) {
              message.channel.sendMessage("PoOoOOoOoOOoOonNnnNnNgGgGGgGgG");
         break;
         case "test" :
-            message.channel.sendmessage("Only working for Akawashii.")
+            message.channel.sendMessage("Only working for Akawashii.")
             break;
         //Mod commands
         case "ban":
