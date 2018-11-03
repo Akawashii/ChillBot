@@ -18,7 +18,7 @@ var servers = {};
 
 bot.on("ready",function() {
 	console.log("Let's listen to chill songs...together.")
-	bot.user.setActivity("i'm now hoisted :D ! /help.") ;
+	bot.user.setActivity("listening to chill songs. /help.") ;
 	bot.user.setStatus("idle");
 });
 
@@ -330,14 +330,9 @@ bot.on("message", function(message) {
         case "marry" :
         message.channel.sendMessage("Chill.I can't marry you now.");
         break;
-        case "emotelist" :
-        var server = servers[message.guild.id];
-        message.channel.sendMessage("There is a list of the emotes for this server.Enjoy.");
-        message.channel.sendMessage(server.emojis);
-        break;
         case "token" :
         message.channel.sendMessage("No.")        
-
+		break;
         //default
         default:
         message.channel.sendMessage("It's not a command.Maybe try ``/help``?")
