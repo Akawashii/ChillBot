@@ -1,17 +1,15 @@
 {
-  "name": "despacito2",
+  "name": "ChillBot",
   "version": "1.0.0",
-  "description": "Priverate spam bot for ping me daddy's server",
+  "description": "A chillBot.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Akawashii",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.4.2"
-  },
-  "scripts": {
-  "start": "node server.js"
   }
 }
