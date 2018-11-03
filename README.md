@@ -1,5 +1,6 @@
 # ChillBot
 Hey.
-Its me Akawashii.
-I have a bot discord now.
-Enjoy.
+Its me Akawashii. \n
+I have a bot discord now. \n
+Enjoy.\n
+This bot is not finished yeeeeeeeeeeet
