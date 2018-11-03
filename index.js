@@ -18,7 +18,7 @@ var servers = {};
 
 bot.on("ready",function() {
 	console.log("Let's listen to chill songs...together.")
-	bot.user.setActivity("listening to chill songs. /help.") ;
+	bot.user.setActivity("i'm now hoisted :D ! /help.") ;
 	bot.user.setStatus("idle");
 });
 
