@@ -40,9 +40,9 @@ var bot = new Discord.Client();
 var servers = {};
 
 bot.on("ready",function() {
-	console.log("Ready to test.")
-	bot.user.setActivity("i'M a NiGgEr ") ;
-	bot.user.setStatus("dnd");
+	console.log("Yes.")
+	bot.user.setActivity("Check out /hug and /kiss. /help.") ;
+	bot.user.setStatus("idle");
 });
 
 bot.on("message", function(message) {
