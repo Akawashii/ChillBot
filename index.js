@@ -2,7 +2,7 @@
 //Right now,the bot is not ready to be a real bot.If he become a real bot,CuteBot will be here for the tests.
 //Spikan was there
 const Discord = require("discord.js"); //No need to explain.We just require discord.js.
-//const TOKEN = "YourSuperSecretTokenHere" //do not share your token
+//const TOKEN = "Your token here" //do not share your token
 const PREFIX = "/"
 var hug = [
     "https://cdn.discordapp.com/attachments/330336168422014977/508702572199018506/hug-SywetdQvZ.gif",
@@ -27,7 +27,6 @@ var kiss = [
   "https://cdn.discordapp.com/attachments/330336285870915586/509764987733147649/kiss-HJkxXNtjZ.gif",
   "https://cdn.discordapp.com/attachments/330336285870915586/509765070625046529/tenor.gif"
 ];
-
 var fortunes = [
     "Yeah.I think.",
     "No.I don't think so.",
@@ -41,9 +40,9 @@ var bot = new Discord.Client();
 var servers = {};
 
 bot.on("ready",function() {
-	console.log("Let's listen to chill songs...together.")
-	bot.user.setActivity("listening to chill songs. /help.") ;
-	bot.user.setStatus("idle");
+	console.log("Ready to test.")
+	bot.user.setActivity("i'M a NiGgEr ") ;
+	bot.user.setStatus("dnd");
 });
 
 bot.on("message", function(message) {
@@ -385,7 +384,10 @@ bot.on("message", function(message) {
         //default
         default:
         message.channel.sendMessage("It's not a command.Maybe try ``/help``?")
-    
+
+
+    };
+
 });
 //bot.login(TOKEN); //(TOKEN) will be our token.
 bot.login(bot.login(process.env.TOKEN));
