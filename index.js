@@ -4,6 +4,30 @@
 const Discord = require("discord.js"); //No need to explain.We just require discord.js.
 //const TOKEN = "YourSuperSecretTokenHere" //do not share your token
 const PREFIX = "/"
+var hug = [
+    "https://cdn.discordapp.com/attachments/330336168422014977/508702572199018506/hug-SywetdQvZ.gif",
+    "https://cdn.discordapp.com/attachments/330336168422014977/508695521301364758/hug-BJ0UovdUM.gif",
+    "https://cdn.discordapp.com/attachments/330336168422014977/508695441152409600/hug-rJaog0FtZ.gif",
+    "https://cdn.discordapp.com/attachments/330336426451402753/506786258379341835/hug-Sk-xxs3C-.gif",
+    "https://cdn.discordapp.com/attachments/330336168422014977/509761862683066379/hug-Hk0yFumwW.gif",
+
+
+];
+var kiss = [
+  "https://cdn.discordapp.com/attachments/330336168422014977/509761578342678548/kiss-ryoW3T_vW.gif",
+  "https://cdn.discordapp.com/attachments/330336168422014977/509761781951102976/kiss-H1e7nadP-.gif",
+  "https://cdn.discordapp.com/attachments/330336168422014977/509762090995548161/3288198890_1_2_ubCOqOwV.gif",
+  "https://cdn.discordapp.com/attachments/330336168422014977/509762168099569664/Toradora_best_scene.gif",
+  "https://cdn.discordapp.com/attachments/330336168422014977/509762379156815882/kiss_1.gif",
+  "https://cdn.discordapp.com/attachments/330336168422014977/509763386939146260/kiss_3.gif",
+  "https://cdn.discordapp.com/attachments/330336285870915586/509763000941412353/ryEvhTOwW.gif",
+  "https://cdn.discordapp.com/attachments/330336285870915586/509762745575407636/BydoCy9yG.gif",
+  "https://cdn.discordapp.com/attachments/330336285870915586/509763351824302080/H1a42auvb.gif",
+  "https://cdn.discordapp.com/attachments/330336285870915586/509763542359080980/kiss-BJLP3a_Pb.gif",
+  "https://cdn.discordapp.com/attachments/330336285870915586/509764987733147649/kiss-HJkxXNtjZ.gif",
+  "https://cdn.discordapp.com/attachments/330336285870915586/509765070625046529/tenor.gif"
+];
+
 var fortunes = [
     "Yeah.I think.",
     "No.I don't think so.",
@@ -38,7 +62,19 @@ bot.on("message", function(message) {
         break;
         case "test" :
             message.channel.sendMessage("Only working for Akawashii.")
-            break;
+            break; 
+            //Info?
+            case "invite" :
+            message.channel.send("Put some chill vibes in your server.")
+            case "userinfo" :
+
+            //Music
+        case "play" :
+            message.channel.sendMessage("Can't play music.")
+        case "stop":
+        message.channel.sendMessage("Can't play music.")
+
+
         //Mod commands
         case "ban":
         var mem = message.mentions.members.first();
@@ -48,7 +84,7 @@ bot.on("message", function(message) {
             return message.channel.send({"embed": { 
                 "color": 14393835,
                 "footer": {
-                "icon_url": "https://cdn.discordapp.com/avatars/442793696497369089/af45a442037f034aa99644e322939718.png?size=2048",
+                "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/f75c0ad7134c670da350f9c61aa55a6c.png?size=2048",
                 "text": "Ban command | ChillBot | Created by Akawashii."
                 },
                  
@@ -91,7 +127,7 @@ bot.on("message", function(message) {
            return message.channel.send({"embed": { 
                "color": 14393835,
                "footer": {
-               "icon_url": "https://cdn.discordapp.com/avatars/442793696497369089/af45a442037f034aa99644e322939718.png?size=2048",
+               "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/f75c0ad7134c670da350f9c61aa55a6c.png?size=2048",
                "text": "Kick command | ChillBot | Created by Akawashii."
                },
                 
@@ -132,7 +168,7 @@ bot.on("message", function(message) {
            return message.channel.send({"embed": { 
                "color": 14393835,
                "footer": {
-               "icon_url": "https://cdn.discordapp.com/avatars/442793696497369089/af45a442037f034aa99644e322939718.png?size=2048",
+               "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/f75c0ad7134c670da350f9c61aa55a6c.png?size=2048",
                "text": "Mute command | ChillBot | Created by Akawashii."
                },
                 
@@ -174,7 +210,7 @@ bot.on("message", function(message) {
            return message.channel.send({"embed": { 
                "color": 14393835,
                "footer": {
-               "icon_url": "https://cdn.discordapp.com/avatars/442793696497369089/af45a442037f034aa99644e322939718.png?size=2048",
+               "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/f75c0ad7134c670da350f9c61aa55a6c.png?size=2048",
                "text": "Unmute command | ChillBot | Created by Akawashii."
                },
                 
@@ -212,12 +248,10 @@ bot.on("message", function(message) {
                 break;
 
             case "purge":
-            //if the user can't
-            if (message.author.missingPermissions("DELETE_MESSAGES")) {
-                message.channel.sendMessage("You can't use that.");
+            if (!message.author.hasPermission("DELETE_MESSAGES")) {
+              return  message.channel.sendMessage("You can't use that.");
             };
-            return;
-            break;
+            
             //if the user can
             if (message.member.hasPermission("DELETE_MESSAGES")) {
            
@@ -229,10 +263,9 @@ bot.on("message", function(message) {
                 //Other commands
             case "help" :
             message.channel.send({"embed": {
-                      "url": "https://discordapp.com",
                       "color": 14393835,
                       "footer": {
-                        "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+                        "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/f75c0ad7134c670da350f9c61aa55a6c.png?size=2048",
                         "text": "Help | ChillBot | Created by Akawashii."
                       },
                       
@@ -261,6 +294,7 @@ bot.on("message", function(message) {
                     }
                   });
             break;
+  
               case "avatar":
 		    const member = message.mentions.members.first();
 			if (!member) return message.channel.send("Here,your beautiful avatar,like you asked. " + message.author.avatarURL);
@@ -271,7 +305,9 @@ bot.on("message", function(message) {
         case "bae": 
         message.channel.sendMessage("That's bae. https://www.youtube.com/watch?v=Woorod1gJ_w")
         break;
-        case "info": 
+        case "info":
+        var mem = message.author
+        var author = message.author
         message.channel.send({"embed": { 
             "description": "My creator,Akawashii,own a [Nitro Discord server](https://discord.gg/uucWDrP).She have a [Youtube Channel](https://www.youtube.com/channel/UCLewV8AA2hLpti5QiqbgKZg?view_as=subscriber) too.  For some support,dm her [here](https://twitter.com/akawashii).",
             "color": 14393835,
@@ -283,8 +319,8 @@ bot.on("message", function(message) {
               "url": "https://cdn.discordapp.com/attachments/442795664632446978/506492319466520587/unknown.png"
             },
             "author": {
-              "name": "Asked for infos?",
-              "icon_url": ""
+              "name": "Asked for infos,"+ (message.author.username) + "?",
+              "icon_url": (author.avatarURL)
             },
             "fields": [
               {
@@ -318,28 +354,38 @@ bot.on("message", function(message) {
         else message.channel.sendMessage("Can't read that.")
        break;
    case "hug":
-        var mem = message.members.mention.first();
-        if (!mem) return message.channel.sendMessage("Please mention a member.")
-        else
-        if (args[1]) message.channel.sendMessage("**" + member.displayName + "** you have hugged by **" + message.author.displayName  + "**" + hug[Math.floor(Math.random() * hug.length)]);
-        else message.channel.sendMessage("Please mention a member.")
+   var mem = message.mentions.members.first();
+   if (!mem) return message.channel.sendMessage("Please mention a member.")
+              if (args[1]) message.channel.sendMessage("**" + mem.displayName + "**, you have been hugged by **" + message.author.username  + "** " + hug[Math.floor(Math.random() * hug.length)]);
        break;
+       case "kiss" : 
+       var mem = message.mentions.members.first();
+       if (!mem) return message.channel.sendMessage("Please mention a member.")
+                  if (args[1]) message.channel.sendMessage("**" + mem.displayName + "**, you have been kissed by **" + message.author.username  + "** " + kiss[Math.floor(Math.random() * kiss.length)]);
+           break;
    case "chill" :
        message.channel.sendMessage("Here,some good music.https://www.youtube.com/playlist?list=PLPdz_b9o4gwWvB7q3E9-OvtaalZHVa3jM");
        break; 
         case "marry" :
         message.channel.sendMessage("Chill.I can't marry you now.");
         break;
+        case "emotelist" :
+        var server = servers[message.guild.id];
+        message.channel.sendMessage("There is a list of the emotes for this server.Enjoy.");
+        message.channel.sendMessage(server.emojis);
+        break;
         case "token" :
-        message.channel.sendMessage("No.")        
-		break;
+        message.channel.sendMessage("No.")
+        //audit log
+        case "auditlog" :
+        message.channel.sendMessage("-Added ``kiss`` and ``hug`` command.Going to be upgrade soon.")
+   
+        break;
+
         //default
         default:
         message.channel.sendMessage("It's not a command.Maybe try ``/help``?")
-
-
-    };
-
+    }:
 });
 //bot.login(TOKEN); //(TOKEN) will be our token.
 bot.login(bot.login(process.env.TOKEN));
