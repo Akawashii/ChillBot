@@ -385,7 +385,7 @@ bot.on("message", function(message) {
         //default
         default:
         message.channel.sendMessage("It's not a command.Maybe try ``/help``?")
-    }:
+    
 });
 //bot.login(TOKEN); //(TOKEN) will be our token.
 bot.login(bot.login(process.env.TOKEN));
