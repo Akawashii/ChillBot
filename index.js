@@ -41,7 +41,7 @@ var servers = {};
 
 bot.on("ready",function() {
 	console.log("Yes.")
-	bot.user.setActivity("Check out /hug and /kiss. /help.") ;
+	bot.user.setActivity("Woulf you chill with me? /help.") ;
 	bot.user.setStatus("idle");
 });
 
@@ -308,46 +308,46 @@ bot.on("message", function(message) {
         var mem = message.author
         var author = message.author
         message.channel.send({"embed": { 
-            "description": "My creator,Akawashii,own a [Nitro Discord server](https://discord.gg/uucWDrP).She have a [Youtube Channel](https://www.youtube.com/channel/UCLewV8AA2hLpti5QiqbgKZg?view_as=subscriber) too.  For some support,dm her [here](https://twitter.com/akawashii).",
-            "color": 14393835,
-            "footer": {
-              "icon_url": "",
-              "text": "ChillBot | Created by Akawashii."
+          "description": "My creator,Akawashii,own a [Nitro Discord server](https://discord.gg/uucWDrP).She have a [Youtube Channel](https://www.youtube.com/channel/UCLewV8AA2hLpti5QiqbgKZg?view_as=subscriber) too.  For some support,dm her [here](https://twitter.com/akawashii).",
+          "color": 8692977,
+          "footer": {
+            "icon_url": "https://cdn.discordapp.com/avatars/442793696497369089/807dbeac63e43909a576ffeff4606b53.png?size=2048",
+            "text": "ChillBot | Created by Akawashii."
+          },
+          "image": {
+            "url": "https://cdn.discordapp.com/attachments/330336285870915586/510944486197690428/alena-aenami-atlast2k2.png"
+          },
+           "author": {
+            "name": "Asked for infos,"+ (message.author.username) + "?",
+            "icon_url": (author.avatarURL)
+          },
+          "fields": [
+            {
+              "name": "Who is ChillBot? Why **ChillBot**?",
+              "value": "ChillBot is a Chill Bot.He can ban and kick you,without any doubts.Why ChillBot?Because Chill music>all music."
             },
-            "image": {
-              "url": "https://cdn.discordapp.com/attachments/442795664632446978/506492319466520587/unknown.png"
+            {
+              "name": "Who is Akawashii?",
+              "value": "Akawashii is a person who is the dev of the bot."
             },
-            "author": {
-              "name": "Asked for infos,"+ (message.author.username) + "?",
-              "icon_url": (author.avatarURL)
+            {
+              "name": "Who helped Akawashii to dev this bot?",
+              "value": "[Spikan](https://www.twitch.tv/spikan26) helped Akawashii to dev ChillBot.Also,[Discord.js](https://discord.js.org/#/docs/main/stable/general/welcome) documentation helped her a lot too."
             },
-            "fields": [
-              {
-                "name": "Who is ChillBot? Why **ChillBot**?",
-                "value": "ChillBot is a Chill Bot.He can ban and kick you,without any doubts.Why ChillBot?Because Chill music>all music."
-              },
-              {
-                "name": "Who is Akawashii?",
-                "value": "Akawashii is a person who is the dev of the bot."
-              },
-              {
-                "name": "Who helped Akawashii to dev this bot?",
-                "value": "[Spikan](https://www.twitch.tv/spikan26) helped Akawashii to dev ChillBot.Also,[Discord.js](https://discord.js.org/#/docs/main/stable/general/welcome) documentation helped her a lot too."
-              },
-              {
-                "name": "Want to help me?",
-                "value": "Dm me [here](https://twitter.com/akawashii).",
-                "inline": false
-              },
-              {
-                "name": "Want to let me know some ideas ?",
-                "value": "Watch the 'Want to help me?' section. ",
-                "inline": false
-              }
+            {
+              "name": "Want to help me/let me know some ideas?",
+              "value": "Dm me [here](https://twitter.com/akawashii).",
+              "inline": false
+            },
+            {
+              "name": "I do not own artworks.",
+              "value": "Pfp & artworks by [Alena Aenami](https://www.artstation.com/aenamiart),check her work,it's just amazing !",
+              "inline": false
+            }
             ]
         
         }});
-        break;
+		    break;
         case "8ball":
         if (args[1]) message.channel.sendMessage(fortunes[Math.floor(Math.random() * fortunes.length)]);
         else message.channel.sendMessage("Can't read that.")
@@ -380,7 +380,9 @@ bot.on("message", function(message) {
         message.channel.sendMessage("-Added ``kiss`` and ``hug`` command.Going to be upgrade soon.")
    
         break;
-
+	    case "shrug" : 
+		    message.reply("¯\_(ツ)_/¯");
+		    break;
         //default
         default:
         message.channel.sendMessage("It's not a command.Maybe try ``/help``?")
