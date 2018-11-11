@@ -41,7 +41,7 @@ var servers = {};
 
 bot.on("ready",function() {
 	console.log("Yes.")
-	bot.user.setActivity("Woulf you chill with me? /help.") ;
+	bot.user.setActivity("Would you chill with me? /help.") ;
 	bot.user.setStatus("idle");
 });
 
