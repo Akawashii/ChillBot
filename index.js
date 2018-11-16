@@ -41,7 +41,7 @@ var servers = {};
 
 bot.on("ready",function() {
 	console.log("Yes.")
-	bot.user.setActivity("Chilling with" + (bot.guilds.size)+ " servers.") ;
+	bot.user.setActivity("Chilling with " + (bot.guilds.size)+ " servers.") ;
 	bot.user.setStatus("idle");
 });
 
