@@ -41,7 +41,7 @@ var servers = {};
 
 bot.on("ready",function() {
 	console.log("Yes.")
-	bot.user.setActivity("Would you chill with me? /help.") ;
+	bot.user.setActivity("Chilling with" + (bot.guilds.size)+ " servers.") ;
 	bot.user.setStatus("idle");
 });
 
@@ -246,19 +246,50 @@ bot.on("message", function(message) {
             
                 break;
 
-            case "purge":
-            if (!message.author.hasPermission("DELETE_MESSAGES")) {
-              return  message.channel.sendMessage("You can't use that.");
+           case "purge":
+            var mc = message.content.split(" ")[1];
+            bot.on('error', console.error);
+            if(!message.member.roles.some(r=>["Administrator", "Moderator", "Mod", "Admin", "Owner", "Modérateur", "Akawashii the thot destroyer", "Mod in training", "Staff"].includes(r.name)) )   {     
+                    return  message.channel.sendMessage("You can't use that.Check if you have some of these roles : Owner,Admin,Administrator,Mod,Moderator,Modérateur,Staff,Mod in training");
             };
             
+            
+            
             //if the user can
-            if (message.member.hasPermission("DELETE_MESSAGES")) {
-           
-                var mc = message.content.split(" ")[1];
-                message.channel.bulkDelete(mc);
+            if(message.member.roles.some(r=>["Administrator", "Moderator", "Mod", "Admin", "Owner", "Modérateur", "Akawashii the thot destroyer", "Mod in training", "Staff"].includes(r.name)) )   {     
+              if(!mc) {
+              return  message.channel.send({"embed" :{ 
+                  "color": 8953587,
+                  "footer": {
+                    "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/e486df765d6ec7db6923549fb5f7916b.png?size=2048",
+                    "text": "Purge command | Chillbot | Created by Akawashii."
+                  },
+                    "author": {
+                      "name": "Purge command"
+                    },
+                    "fields": [
+                      {
+                        "name": "Usage:",
+                        "value": "/purge [number of messages]"
+                      },
+                      {
+                          "name": "Example:",
+                          "value": "/purge 5"
+                        },
+                        {
+                          "name": "Permissions required:",
+                          "value": "Delete messages."
+                        }
+          ]
+                }});
+            };
+              if (mc){
+                  message.channel.bulkDelete(mc);
+                message.channel.sendMessage(mc + " messages have been deleted by **" + message.author.username + "**.")
                 break;
 
-            };
+            }};
+            break;
                 //Other commands
             case "help" :
             message.channel.send({"embed": {
