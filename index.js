@@ -57,7 +57,7 @@ bot.on("message", function(message) {
 //tests
 
         case "ping":
-             (message(process.env.PING))
+             (process.env.PING)
         break;
         case "test" :
             message.channel.sendMessage("Only working for Akawashii.")
