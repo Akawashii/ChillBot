@@ -83,7 +83,7 @@ bot.on("message", function(message) {
             return message.channel.send({"embed": { 
                 "color": 14393835,
                 "footer": {
-                "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/f75c0ad7134c670da350f9c61aa55a6c.png?size=2048",
+                "icon_url": "https://cdn.discordapp.com/attachments/496409318157975562/516209749084340235/bot_pfp.png",
                 "text": "Ban command | ChillBot | Created by Akawashii."
                 },
                  
@@ -126,7 +126,7 @@ bot.on("message", function(message) {
            return message.channel.send({"embed": { 
                "color": 14393835,
                "footer": {
-               "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/f75c0ad7134c670da350f9c61aa55a6c.png?size=2048",
+               "icon_url": "https://cdn.discordapp.com/attachments/496409318157975562/516209749084340235/bot_pfp.png",
                "text": "Kick command | ChillBot | Created by Akawashii."
                },
                 
@@ -167,7 +167,7 @@ bot.on("message", function(message) {
            return message.channel.send({"embed": { 
                "color": 14393835,
                "footer": {
-               "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/f75c0ad7134c670da350f9c61aa55a6c.png?size=2048",
+               "icon_url": "https://cdn.discordapp.com/attachments/496409318157975562/516209749084340235/bot_pfp.png",
                "text": "Mute command | ChillBot | Created by Akawashii."
                },
                 
@@ -209,7 +209,7 @@ bot.on("message", function(message) {
            return message.channel.send({"embed": { 
                "color": 14393835,
                "footer": {
-               "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/f75c0ad7134c670da350f9c61aa55a6c.png?size=2048",
+               "icon_url": "https://cdn.discordapp.com/attachments/496409318157975562/516209749084340235/bot_pfp.png",
                "text": "Unmute command | ChillBot | Created by Akawashii."
                },
                 
@@ -261,7 +261,7 @@ bot.on("message", function(message) {
               return  message.channel.send({"embed" :{ 
                   "color": 8953587,
                   "footer": {
-                    "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/e486df765d6ec7db6923549fb5f7916b.png?size=2048",
+                    "icon_url": "https://cdn.discordapp.com/attachments/496409318157975562/516209749084340235/bot_pfp.png",
                     "text": "Purge command | Chillbot | Created by Akawashii."
                   },
                     "author": {
@@ -295,7 +295,7 @@ bot.on("message", function(message) {
             message.channel.send({"embed": {
                       "color": 14393835,
                       "footer": {
-                        "icon_url": "https://cdn.discordapp.com/avatars/496375401585704961/f75c0ad7134c670da350f9c61aa55a6c.png?size=2048",
+                        "icon_url": "https://cdn.discordapp.com/attachments/496409318157975562/516209749084340235/bot_pfp.png",
                         "text": "Help | ChillBot | Created by Akawashii."
                       },
                       
@@ -342,7 +342,7 @@ bot.on("message", function(message) {
           "description": "My creator,Akawashii,own a [Nitro Discord server](https://discord.gg/uucWDrP).She have a [Youtube Channel](https://www.youtube.com/channel/UCLewV8AA2hLpti5QiqbgKZg?view_as=subscriber) too.  For some support,dm her [here](https://twitter.com/akawashii).",
           "color": 8692977,
           "footer": {
-            "icon_url": "https://cdn.discordapp.com/avatars/442793696497369089/807dbeac63e43909a576ffeff4606b53.png?size=2048",
+            "icon_url": "https://cdn.discordapp.com/attachments/496409318157975562/516209749084340235/bot_pfp.png",
             "text": "ChillBot | Created by Akawashii."
           },
           "image": {
