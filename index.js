@@ -55,7 +55,33 @@ bot.on("message", function(message) {
     switch (args[0].toLowerCase()) {
 
 //tests
-
+//just a new command,not a test.Just too lazy for put it in the right section.Lazy dev.
+		    case "welcome":
+     var despacito = message.mentions.members.first();
+     if (!despacito) return message.channel.sendMessage("You need to mention someone !");
+     else
+     message.channel.sendMessage({
+      "embed": {
+        "color": 8692977,
+        "footer": {
+          "icon_url": "",
+          "text": "Welcome command | Chillbot by Akawashii"
+        },
+        "author": {
+          "name": despacito.displayName,
+          "icon_url": despacito.user.avatarURL
+        },
+        "fields": [
+          {
+            "name": "Welcome to "+ despacito.displayName ,
+            "value": "Enjoy your stay here!"
+          }
+        ]
+      }
+    });
+     break;
+		    //now this is the real tests
+		    
         case "ping":
                message.channel.sendMessage("PoOoOOoOoOOoOonNnnNnNgGgGGgGgG");
         break;
